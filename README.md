@@ -39,7 +39,20 @@
 
 top은 다양한 옵션을 지원하므로 명령어에 대한 더 자세한 정보는 'man top' 명령어를 사용하여 매뉴얼 페이지를 확인할 수 있습니다.
 
-+ top에 관한 코드 예시
+#### top에 관한 코드 예시
+``` python
+import subprocess
+
+# top 명령어 실행
+command = ['top', '-b', '-n', '1']  # '-b': 배치 모드, '-n': 실행 횟수
+result = subprocess.run(command, capture_output=True, text=True)
+
+# 결과 출력
+print(result.stdout)
+
+
+```
+
 
 
 ## ps
