@@ -95,10 +95,7 @@ print(result.stdout)
   ``` shell
   ps -u ubuntu
   ```
-
-7. 
-
-
+  
 ## jobs
 + jobs'는 리눅스 및 유닉스 기반 운영 체제에서 쉘(Job Control Shell)에서 실행 중인 작업(Job)의 목록을 표시하는 명령어입니다.
 + jobs 명령어를 사용하면 백그라운드(background) 또는 중지(stopped)된 작업들의 상태와 관련 정보를 확인할 수 있습니다
