@@ -50,10 +50,13 @@ result = subprocess.run(command, capture_output=True, text=True)
 # 결과 출력
 print(result.stdout)
 
-
 ```
-
-
++ 위는 Python 코드를 사용하여 top 명령어의 결과를 가져오는 예시입니다.
+  위의 예시에서 subprocess.run() 함수를 사용하여 top 명령어를 실행합니다.
+  명령어와 옵션은 command 리스트에 저장되어 있습니다. 이 예시에서는 -b 옵션으로 배치 모드를 사용하고, -n 옵션으로 한 번만 실행하도록 설정했습니다.
+  subprocess.run() 함수의 capture_output=True는 명령어의 실행 결과를 캡처하도록 설정하고, text=True는 결과를 텍스트 형식으로 반환하도록 설정합니다.
+  마지막으로, result.stdout을 출력하여 top 명령어의 결과를 터미널에 출력합니다.
+  이 예시를 실행하면 top 명령어의 결과를 Python 코드에서 확인할 수 있습니다. 결과에는 현재 시스템의 상태, 프로세스 목록, CPU 사용량, 메모리 사용량 등이 포함될 것입니다.
 
 ## ps
 
