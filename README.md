@@ -84,24 +84,14 @@ print(result.stdout)
    + "ps aux" 형식을 사용하면 프로세스에 대한 상세 정보를 표시합니다.
    + 이 정보에는 사용자, CPU 사용량, 메모리 사용량, 시작 시간, 실행 시간, 명령어 등이 포함될 수 있습니다.
    + 출력되는 상세 정보는 출력 형식과 운영 체제에 따라 다를 수 있습니다.
-   
-#### ps 에 관한 코드 예시
-``` python
-import subprocess
 
-# ps 명령어 실행
-command = ['ps', 'aux']
-result = subprocess.run(command, capture_output=True, text=True)
+6. 특정 사용자의 프로세스 정보 확인
+  + 특정 사용자의 프로세스 정보만 확인하려면 -u 옵션을 사용합니다.
+  + 예를 들어, 사용자 ubuntu의 프로세스 정보를 확인하려면 다음과 같이 입력합니다
+  ``` shell
+  ps -u ubuntu
+  ```
 
-# 결과 출력
-print(result.stdout)
-
-```
-+ 위의 예시에서 subprocess.run() 함수를 사용하여 ps 명령어를 실행합니다.
-+ 명령어는 command 리스트에 저장되어 있으며, 'ps', 'aux'는 기본적인 형식으로 모든 사용자 프로세스에 대한 상세 정보를 표시합니다.
-+ subprocess.run() 함수의 capture_output=True는 명령어의 실행 결과를 캡처하도록 설정하고, text=True는 결과를 텍스트 형식으로 반환하도록 설정합니다.
-+ 마지막으로, result.stdout을 출력하여 ps 명령어의 결과를 터미널에 출력합니다.
-+ 이 예시를 실행하면 ps 명령어의 결과를 Python 코드에서 확인할 수 있습니다. 결과에는 프로세스 ID (PID), 사용자, CPU 사용량, 메모리 사용량, 실행 시간, 명령어 등이 포함될 것입니다.
 
 ## jobs
 + jobs'는 리눅스 및 유닉스 기반 운영 체제에서 쉘(Job Control Shell)에서 실행 중인 작업(Job)의 목록을 표시하는 명령어입니다.
